@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+class Math // classe math 
+{
+    public: // publica
+        Math(); // default
+        Math(double, double); // metodo declarado do math envia dois paramentros
+          Math(double, double, double);
+};
+
+Math::Math()
+{
+    cout<<"Media de alunos com 3 notas: "<<(0)/3<<endl;
+}
+Math::Math(double g1, double g2) // mathe é chamado e recebe dois parametros
+{
+    cout<<"Media: "<<(g1+g2)/2<<endl;  // math faz a divisao e retorn para a cout aparecendo  Media: mais os valores que serao recebidos
+}
+
+Math::Math(double g1, double g2, double g3)
+{
+    cout<<"Media de alunos com 3 notas: "<<(g1+g2+g3)/3<<endl;
+}
+
+
+
+
+int main()
+{
+    Math ze(9, 8); // math sendo executada recebendo dois paramentros 10  e 8
+Math ana(10, 8,9);
+Math jose();
+    return 0;
+}
