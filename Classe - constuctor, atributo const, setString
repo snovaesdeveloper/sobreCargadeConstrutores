@@ -4,15 +4,21 @@ using namespace std;
 class Math // classe math 
 {
     public: // publica
-        Math(); // default
+      
         Math(double, double); // metodo declarado do math envia dois paramentros
           Math(double, double, double);
 };
 
-Math::Math()
-{
-    cout<<"Media de alunos com 3 notas: "<<(0)/3<<endl;
-}
+
+class GradeBook {
+  public : 
+   GradeBook (); 
+          GradeBook( string , int = 0 ); 
+         GradeBook( int );
+};
+
+
+
 Math::Math(double g1, double g2) // mathe é chamado e recebe dois parametros
 {
     cout<<"Media: "<<(g1+g2)/2<<endl;  // math faz a divisao e retorn para a cout aparecendo  Media: mais os valores que serao recebidos
@@ -23,6 +29,18 @@ Math::Math(double g1, double g2, double g3)
     cout<<"Media de alunos com 3 notas: "<<(g1+g2+g3)/3<<endl;
 }
 
+GradeBook::GradeBook()
+{
+  cout<<"Grandebook default: "<<endl;
+}
+GradeBook::GradeBook(string , int )
+{
+  cout<<"Grandebook com string e numeros: "<<endl;
+}
+GradeBook::GradeBook( int )
+{
+  cout<<"Grandebook com string e inteiro: "<<endl;
+}
 
 
 
@@ -30,6 +48,9 @@ int main()
 {
     Math ze(9, 8); // math sendo executada recebendo dois paramentros 10  e 8
 Math ana(10, 8,9);
-Math jose();
+
+  GradeBook();
+  GradeBook("Sa", 8);
+    GradeBook( 8);
     return 0;
 }
